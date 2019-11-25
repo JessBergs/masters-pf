@@ -1,0 +1,40 @@
+{
+    "env": {
+      "browser": true,
+      "jest/globals": true
+    },
+    "extends": [
+      "airbnb-base",
+      "prettier",
+      "prettier/react",
+      "plugin:jest/recommended",
+      "plugin:react/recommended"
+    ],
+    "parser": "babel-eslint",
+    "plugins": ["import", "jest", "prettier"],
+    "rules": {
+      "import/no-extraneous-dependencies": [0],
+      "import/prefer-default-export": [0],
+      "class-methods-use-this": [0],
+      "react/prop-types":[0],
+      "prettier/prettier": [
+        "warn",
+        {
+          "singleQuote": true,
+          "printWidth": 100,
+          "tabWidth": 4,
+          "trailingComma": "es5"
+        }
+      ]
+    },
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "extensions": [".js", ".jsx"]
+        }
+      },
+      "react": {
+        "version": "detect"
+      }
+    }
+  }
