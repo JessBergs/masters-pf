@@ -1,19 +1,11 @@
 @import '../../node_modules/semantic-ui-css/semantic.min.css';
-@import url('https://fonts.googleapis.com/css?family=Montserrat:600, 700|Nunito+Sans|Quicksand:400, 700|Raleway:800');
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600, 700|Nunito+Sans|Quicksand:400, 700|Raleway:800');
 @import 'mixins';
 
 $distance--small: 1vw;
 $distance--large: $distance--small * 1.5;
 $layout-container-width: 80vw;
-
-$colour-scheme_dark: #000;
-$colour-scheme_light: #fff;
-
-$font-size_title: 3.4375em;
-$font-size_subline: 1.5625em;
-$font-size_subsubline: 1.125em;
-$font-size_text: 1em;
 
 body {
     background-color: $colour-scheme_dark;
@@ -22,17 +14,28 @@ body {
     font-family: 'Nunito Sans', 'sans-serif';
 }
 
-section {
-    padding-top: $distance--small;
-}
-
 .index-page__header-section {
-    padding-top: 0;
-
+    padding:0;
+    margin:0;
     .index-page__header-container {
-        background-color: #afc;
         position: relative;
+        width: 100%;
+        height: 100%; 
 
+        .index-page__header-video{
+            position: absolute;
+            margin-left: auto;
+            margin-right:auto;
+            left: 50%;
+            top: 49%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            &--hidden{
+                position: relative;
+                visibility: hidden;
+            }
+        }
         .index-page__header-text {
             position: absolute;
             color: $colour-scheme_light;
@@ -55,10 +58,11 @@ section {
     }
 }
 .index-page__layout-container {
-    background-color: #afc;
     margin-left: auto;
     margin-right: auto;
     width: $layout-container-width;
+    padding-top: $distance--small;
+    padding-bottom: $distance--large;
 }
 
 .index-page__heading {
@@ -72,7 +76,6 @@ section {
     grid-row-gap: $distance--small;
 
     .index-page__project-item {
-        background-color: #fab;
         position: relative;
     }
 
@@ -107,14 +110,14 @@ section {
 
 .index-page__footer-section {
     background-color: $colour-scheme_light;
-
+    padding-bottom: $distance--large;
     .index-page__footer-grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-column-gap: $distance--small;
 
         .index-page__footer-item {
-            background-color: #ffa;
+       
             height: 100%;
             width: 100%;
             position: relative;

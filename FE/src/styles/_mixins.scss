@@ -1,3 +1,12 @@
+$colour-scheme_dark: #000;
+$colour-scheme_light: #fff;
+
+$font-size_title: 3.4375em;
+$font-size_subline: 1.5625em;
+$font-size_subsubline: 1.125em;
+$font-size_text: 1em;
+
+
 @mixin style-h1 {
     font-size: $font-size_title;
     letter-spacing: 0.08em;
