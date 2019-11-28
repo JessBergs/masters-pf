@@ -1,7 +1,7 @@
 import React from 'react';
 
 import '../styles/indexPage.scss';
-import { projects } from '../../data/projects.json';
+import { projectsData } from '../../data/projectsData.json';
 
 const Header = () => (
     <div className="index-page__header-container">
@@ -55,7 +55,7 @@ const ProjectCollection = ({ content }) => (
         <div className="index-page__projects-container">
             <div className="index-page__projects-grid">
                 {content.map(item => (
-                    <ProjectItem {...item} />
+                    <ProjectItem {...item.promo} />
                 ))}
             </div>
         </div>
@@ -93,7 +93,7 @@ const IndexPage = () => (
             <Header />
         </section>
         <section className="index-page__projects-section">
-            <ProjectCollection content={projects} />
+            <ProjectCollection content={projectsData} />
         </section>
         <section className="index-page__footer-section">
             <Footer />

@@ -1,0 +1,38 @@
+{
+    "projectsData": [
+        {
+            "id": 0,
+            "promo": {
+                "projectTitle": "b",
+                "subline": "b",
+                "linkUrl": ""
+            },
+            "content": {
+                "headerImageSrc": "https://jbergs.eu/img_goma/goma_header_GR.jpg",
+                "title": "title",
+                "subtitle": "sub",
+                "tags": "tags",
+                "articleBlocks": [
+                    { "type": "text", "text": "my article block text", "title": "block title" },
+                    { "type": "singleImage", "src": "https://jbergs.eu/img_goma/goma_plate3.jpg" },
+                    { "type": "embeddedVideo", "src": "https://www.youtube.com/embed/5h5-iIPu7bM" },
+                    {
+                        "type": "carousel",
+                        "items": [
+                            {
+                                "type": "image",
+                                "src": "https://jbergs.eu//img_lab2/lab2_hmd_cardboard.jpg",
+                                "subtitle": "my sub"
+                            },
+                            {
+                                "type": "image",
+                                "src": "https://jbergs.eu//img_lab2/lab2_hmd_cardboard.jpg",
+                                "subtitle": "my sub1"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
