@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import IndexPage from './components/IndexPage.jsx';
-import ProjectPage from './components/ProjectPage.jsx'
+import Routing from './Routing.jsx';
 import * as serviceWorker from './serviceWorker.js';
 
-ReactDOM.render(<ProjectPage id={0} />, document.getElementById('root'));
+ReactDOM.render(<Routing/>, document.getElementById('root'));
 
 serviceWorker.unregister();

@@ -2,6 +2,7 @@ import React from 'react';
 
 import '../styles/indexPage.scss';
 import { projectsData } from '../../data/projectsData.json';
+import { Link } from 'react-router-dom';
 
 const Header = () => (
     <div className="index-page__header-container">
@@ -30,10 +31,11 @@ const Header = () => (
     </div>
 );
 
-const ProjectItem = ({ projectTitle, subline, linkUrl }) => {
+const ProjectItem = ({ id, promoData }) => {
+    const {projectTitle, subline} = promoData;
     return (
         <div className="index-page__project-item">
-            <a className="index-page__project-link" href={linkUrl}>
+            <Link className="index-page__project-link" to={`project/${id}`}>
                 <div className="index-page__project-image">
                     <img
                         className="index-page__project-image--hidden"
@@ -44,7 +46,7 @@ const ProjectItem = ({ projectTitle, subline, linkUrl }) => {
                     <div className="index-page__project-title">{projectTitle}</div>
                     <div className="index-page__project-sub">{subline}</div>
                 </div>
-            </a>
+            </Link>
         </div>
     );
 };
@@ -55,7 +57,7 @@ const ProjectCollection = ({ content }) => (
         <div className="index-page__projects-container">
             <div className="index-page__projects-grid">
                 {content.map(item => (
-                    <ProjectItem {...item.promo} />
+                    <ProjectItem id={item.id} promoData={item.promo}/>
                 ))}
             </div>
         </div>
@@ -80,9 +82,7 @@ const Footer = () => (
                 itemTitle="Contact"
                 text="Spatial virtaces, 3D reconstruction, 3D modelling, IoT wearables, heal"
             />
-            <FooterItem
-                text="© 2018 Jessica Bergs All rights reserved"
-            />
+            <FooterItem text="© 2018 Jessica Bergs All rights reserved" />
         </div>
     </div>
 );

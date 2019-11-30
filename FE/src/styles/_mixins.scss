@@ -6,6 +6,8 @@ $font-size_subline: 1.5625em;
 $font-size_subsubline: 1.125em;
 $font-size_text: 1em;
 
+// TODO: group styles in single mixin
+
 
 @mixin style-h1 {
     font-size: $font-size_title;
