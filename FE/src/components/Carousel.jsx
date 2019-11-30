@@ -1,5 +1,5 @@
 import React from 'react';
-//import '../styles/carousel.scss';
+import '../styles/carousel.scss';
 
 const Carousel = ({ items }) => {
     const content = items.map(item => {

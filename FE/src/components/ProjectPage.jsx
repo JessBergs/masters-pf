@@ -33,7 +33,6 @@ const ArticleBlock = blockData => {
 };
 
 const ProjectPage = (props) => {
-    console.log (props)
     let id;
     if (props.match) {
         id = props.match.params.projectId;
