@@ -38,6 +38,9 @@ const ProjectPage = (props) => {
     if (props.match) {
         id = props.match.params.projectId;
     }
+    if (!id){
+        throw new Error ('Project ID required')
+    }
     const projectContent = projectsData[id].content;
     return (
         <div className="project-page__container">
