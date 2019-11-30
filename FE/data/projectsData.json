@@ -3,8 +3,7 @@
         "id": "Goma",
         "promo": {
             "projectTitle": "a",
-            "subline": "a",
-            "linkUrl": ""
+            "subline": "a"
         },
         "content": {
             "headerImageSrc": "https://jbergs.eu/img_goma/goma_header_GR.jpg",
@@ -37,8 +36,7 @@
         "id": "Spartathlon",
         "promo": {
             "projectTitle": "b",
-            "subline": "b",
-            "linkUrl": ""
+            "subline": "b"
         },
         "content": {
             "headerImageSrc": "https://jbergs.eu/img_goma/goma_header_GR.jpg",
@@ -71,8 +69,7 @@
         "id": "LabSquare",
         "promo": {
             "projectTitle": "c",
-            "subline": "c",
-            "linkUrl": ""
+            "subline": "c"
         },
         "content": {
             "headerImageSrc": "https://jbergs.eu/img_goma/goma_header_GR.jpg",

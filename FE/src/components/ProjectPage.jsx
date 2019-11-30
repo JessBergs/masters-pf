@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/projectPage.scss';
-import projectsData  from '../../data/projectsData.json';
+import projectsData from '../../data/projectsData.json';
 import Carousel from './Carousel.jsx';
 
 const EmbeddedVideo = link => {
