@@ -1,7 +1,7 @@
 import React from 'react';
 
 import '../styles/indexPage.scss';
-import { projectsData } from '../../data/projectsData.json';
+import projectsData from '../../data/projectsData.json';
 import { Link } from 'react-router-dom';
 
 const Header = () => (
