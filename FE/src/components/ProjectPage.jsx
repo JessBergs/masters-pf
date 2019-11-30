@@ -41,10 +41,8 @@ const ProjectPage = (props) => {
         throw new Error ('Project ID required')
     }
     const projectContent = projectsData.filter (project => {
-        console.log (project.id, 'projid')
-        console.log (id, 'id')
         return project.id === id})[0].content;
-        
+
     return (
         <div className="project-page__container">
             <section className="project-page__header">
