@@ -103,7 +103,6 @@ class IndexPage extends React.Component {
     async fetchData(endpointUrl) {
         const response = await fetch(endpointUrl, {mode: 'cors'});
         const body = await response.json();
-        console.log (body);
         this.setState({
                 projectsData: body.Items,
          }, () => {console.log(this.state, '__state updated')});
