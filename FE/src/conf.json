@@ -1,0 +1,10 @@
+{
+    "ApiBaseUrl":"http://localhost:3001/api",
+    "endpoint":{
+        "getAllArticleHeaders": "/articleHeaders",
+        "createArticle": "/createArticle",
+        "getArticleById": "/article/",
+        "deleteArticleById":"/deleteArticle/",
+        "updateArticle":"/updateArticle/"
+    }
+}
