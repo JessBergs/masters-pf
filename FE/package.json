@@ -1,11 +1,9 @@
 {
-    "name": "wiki-frontend",
+    "name": "masters-portfolio",
     "version": "0.1.0",
     "author": "Jessica Bergs",
     "description": "A simple wiki frontend to create and view wiki pages",
     "homepage": "https://jessbergs.github.io/masters-pf/",
-    "main": "public/index.html",
-    "jsnext:main": "src/index.jsx",
     "dependencies": {
         "react": "^16.10.2",
         "react-dom": "^16.10.2",

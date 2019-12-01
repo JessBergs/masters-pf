@@ -3,6 +3,7 @@
 Uses client-side rendering.
 Calls data from AWS Lambda endpoint.
 AWS infrastructure managed by Serverless.
+Deploy to GitHub pages via `npm run deploy`
 
 WIP 
 
