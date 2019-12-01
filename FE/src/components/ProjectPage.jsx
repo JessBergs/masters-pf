@@ -32,16 +32,17 @@ const ArticleBlock = blockData => {
     return <div className="project-page__article-block">{block}</div>;
 };
 
-const ProjectPage = (props) => {
+const ProjectPage = props => {
     let id;
     if (props.match) {
         id = props.match.params.projectId;
     }
-    if (!id){
-        throw new Error ('Project ID required')
+    if (!id) {
+        throw new Error('Project ID required');
     }
-    const projectContent = projectsData.filter (project => {
-        return project.id === id})[0].content;
+    const projectContent = projectsData.filter(project => {
+        return project.id === id;
+    })[0].content;
 
     return (
         <div className="project-page__container">

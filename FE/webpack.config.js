@@ -1,11 +1,13 @@
 const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const nodeExternals = require("webpack-node-externals");
+
 module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js',
-    publicPath: '/'
+    publicPath: '/',
   },
   devServer: {
     historyApiFallback: true,

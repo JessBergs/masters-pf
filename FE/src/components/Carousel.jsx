@@ -11,13 +11,12 @@ const Carousel = ({ items }) => {
     });
     return (
         <div className="carousel__container">
-            <div className= 'carousel__viewport'>
-            <ul className="carousel__content">{content} </ul>
+            <div className="carousel__viewport">
+                <ul className="carousel__content">{content} </ul>
             </div>
-            {content.map( () => (
-            <span className='carousel__page-indicator'>x</span>
+            {content.map(() => (
+                <span className="carousel__page-indicator">x</span>
             ))}
-
         </div>
     );
 };

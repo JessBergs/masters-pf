@@ -1,8 +1,10 @@
 import React from 'react';
+import 'whatwg-fetch';
 
 import '../styles/indexPage.scss';
-import projectsData from '../../data/projectsData.json';
 import { Link } from 'react-router-dom';
+
+const allDataEndpoint = 'https://7grnn3y0h9.execute-api.eu-central-1.amazonaws.com/dev/masters-pf';
 
 const Header = () => (
     <div className="index-page__header-container">
@@ -32,7 +34,7 @@ const Header = () => (
 );
 
 const ProjectItem = ({ id, promoData }) => {
-    const {projectTitle, subline} = promoData;
+    const { projectTitle, subline } = promoData;
     return (
         <div className="index-page__project-item">
             <Link className="index-page__project-link" to={`project/${id}`}>
@@ -57,7 +59,7 @@ const ProjectCollection = ({ content }) => (
         <div className="index-page__projects-container">
             <div className="index-page__projects-grid">
                 {content.map(item => (
-                    <ProjectItem id={item.id} promoData={item.promo}/>
+                    <ProjectItem id={item.id} promoData={item.promo} />
                 ))}
             </div>
         </div>
@@ -87,18 +89,46 @@ const Footer = () => (
     </div>
 );
 
-const IndexPage = () => (
-    <div className="index-page__container">
-        <section className="index-page__header-section">
-            <Header />
-        </section>
-        <section className="index-page__projects-section">
-            <ProjectCollection content={projectsData} />
-        </section>
-        <section className="index-page__footer-section">
-            <Footer />
-        </section>
-    </div>
-);
+class IndexPage extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            projectsData: [],
+        };
+
+        this.fetchData = this.fetchData.bind(this);
+    }
+
+    async fetchData(endpointUrl) {
+        const response = await fetch(endpointUrl, {mode: 'cors'});
+        const body = await response.json();
+        console.log (body);
+        this.setState({
+                projectsData: body.Items,
+         }, () => {console.log(this.state, '__state updated')});
+        
+    }
+
+    componentDidMount() {
+        this.fetchData(allDataEndpoint);
+    }
+
+    render() {
+        return (
+            <div className="index-page__container">
+                <section className="index-page__header-section">
+                    <Header />
+                </section>
+                <section className="index-page__projects-section">
+                    <ProjectCollection content={this.state.projectsData} />
+                </section>
+                <section className="index-page__footer-section">
+                    <Footer />
+                </section>
+            </div>
+        );
+    }
+}
 
 export default IndexPage;

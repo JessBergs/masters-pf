@@ -1,5 +1,9 @@
 # masters-pf
 
+Uses client-side rendering.
+Calls data from AWS Lambda endpoint.
+AWS infrastructure managed by Serverless.
+
 WIP 
 
 [] project page navigation
