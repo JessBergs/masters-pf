@@ -1,8 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Routing from './Routing.jsx';
 import * as serviceWorker from './serviceWorker.js';
+import { hydrate, render } from "react-dom";
 
-ReactDOM.render(<Routing />, document.getElementById('root'));
+const rootElement = document.getElementById("root");
+if (rootElement.hasChildNodes()) {
+  hydrate(<Routing />, rootElement);
+} else {
+  render(<Routing />, rootElement);
+}
 
 serviceWorker.unregister();
+
+

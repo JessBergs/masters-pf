@@ -7,7 +7,7 @@ const Routing = () => (
     <div className="routes__container">
         <BrowserRouter>
             <div>
-                <Route path="/" component={IndexPage} />
+                <Route exact path="/" component={IndexPage} />
                 <Route path="/project/:projectId" component={ProjectPage} />
             </div>
         </BrowserRouter>
